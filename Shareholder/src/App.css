@@ -1,0 +1,80 @@
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 5px;
+    border-top: 20px solid #2FA4D4;
+    border-bottom: 40px solid #2FA4D4;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 400px;
+    height: auto;
+    margin: 20px;
+}
+
+.content h3, .content h3 {
+    color: #333333;
+}
+
+.remark p {
+    font-size: 13px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #1A8CCC;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    margin: 5px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons a {
+    display: block;
+    background-color: #2FA4D4;
+    color: #ffffff;
+    padding: 10px;       
+    width: 30vw;    
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #1A8CCC;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .buttons a {
+        width: 80vw;
+    }
+}

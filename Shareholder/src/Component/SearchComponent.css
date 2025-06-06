@@ -1,0 +1,192 @@
+/* SearchComponent.css - สไตล์ส่วนค้นหา */
+
+/* ===== ส่วนค้นหาหลัก ===== */
+.search-section {
+    margin: 20px 0; /* ระยะห่างบนล่าง */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+}
+
+/* ป้ายชื่อส่วนค้นหา */
+.search-label {
+    text-decoration: underline; /* ขีดเส้นใต้ */
+    font-weight: bold; /* ตัวหนา */
+    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+    display: block; /* แสดงเป็นบล็อก */
+    font-size: 16px;
+    color: #333; /* สีเทาเข้ม */
+}
+
+/* ===== กล่องใส่ข้อมูลค้นหา ===== */
+.search-container {
+    display: flex; /* จัดเรียงแนวนอน */
+    gap: 10px; /* ระยะห่างระหว่างองค์ประกอบ */
+    justify-content: center; /* จัดกึ่งกลาง */
+    align-items: center; /* จัดแนวตั้งกึ่งกลาง */
+    margin: 15px 0; /* ระยะห่างบนล่าง */
+    flex-wrap: wrap; /* ขึ้นบรรทัดใหม่ได้ */
+}
+
+/* ===== ช่องกรอกข้อมูล ===== */
+.search-input {
+    padding: 10px 15px; /* ช่องว่างด้านใน */
+    border: 2px solid #ddd; /* เส้นขอบสีเทาอ่อน */
+    border-radius: 25px; /* มุมโค้งมาก */
+    font-size: 14px;
+    width: 300px; /* ความกว้างคงที่ */
+    outline: none; /* ไม่มีเส้นขอบเมื่อโฟกัส */
+    text-align: center; /* ข้อความกึ่งกลาง */
+    transition: border-color 0.3s ease; /* เปลี่ยนสีขอบแบบค่อยเป็นค่อยไป */
+    font-family: inherit; /* ใช้ฟอนต์เดียวกับ parent */
+}
+
+/* เมื่อคลิกในช่องกรอกข้อมูล */
+.search-input:focus {
+    border-color: #4FC3F7; /* เส้นขอบสีฟ้า */
+    box-shadow: 0 0 5px rgba(79, 195, 247, 0.3); /* เงาสีฟ้าอ่อน */
+}
+
+/* เมื่อกรอกข้อมูลถูกต้อง (13 หลัก) */
+.search-input.valid {
+    border-color: #4CAF50; /* เส้นขอบสีเขียว */
+}
+
+/* เมื่อช่องกรอกข้อมูลถูกปิดใช้งาน */
+.search-input:disabled {
+    background-color: #f5f5f5; /* พื้นหลังสีเทาอ่อน */
+    cursor: not-allowed; /* เคอร์เซอร์ห้าม */
+    opacity: 0.7; /* โปร่งแสงเล็กน้อย */
+}
+
+/* ===== ปุ่มค้นหา ===== */
+.search-button {
+    background-color: #9e9e9e; /* พื้นหลังสีเทา */
+    color: white; /* ข้อความสีขาว */
+    border: none; /* ไม่มีเส้นขอบ */
+    padding: 10px 20px; /* ช่องว่างด้านใน */
+    border-radius: 25px; /* มุมโค้งมาก */
+    font-size: 14px;
+    cursor: pointer; /* เคอร์เซอร์เป็นมือ */
+    transition: all 0.3s ease; /* เปลี่ยนทุกอย่างแบบค่อยเป็นค่อยไป */
+    min-width: 100px; /* ความกว้างขั้นต่ำ */
+    font-family: inherit; /* ใช้ฟอนต์เดียวกับ parent */
+}
+
+/* เมื่อเอาเมาส์ไปชี้ปุ่มค้นหา (ไม่รวมปุ่มที่ปิดใช้งาน) */
+.search-button:hover:not(:disabled) {
+    background-color: #757575; /* เปลี่ยนเป็นสีเทาเข้ม */
+    transform: translateY(-1px); /* เลื่อนขึ้น 1 พิกเซล */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* เงา */
+}
+
+/* เมื่อปุ่มค้นหาถูกปิดใช้งาน */
+.search-button:disabled {
+    background-color: #ccc; /* พื้นหลังสีเทาอ่อน */
+    cursor: not-allowed; /* เคอร์เซอร์ห้าม */
+    transform: none; /* ไม่มีการเคลื่อนไหว */
+    box-shadow: none; /* ไม่มีเงา */
+}
+
+/* ===== ปุ่มล้างข้อมูล ===== */
+.clear-button {
+    background-color: #f44336; /* พื้นหลังสีแดง */
+    color: white; /* ข้อความสีขาว */
+    border: none; /* ไม่มีเส้นขอบ */
+    padding: 10px 12px; /* ช่องว่างด้านใน */
+    border-radius: 25px; /* มุมโค้งมาก */
+    font-size: 12px;
+    cursor: pointer; /* เคอร์เซอร์เป็นมือ */
+    transition: all 0.3s ease; /* เปลี่ยนทุกอย่างแบบค่อยเป็นค่อยไป */
+    min-width: 40px; /* ความกว้างขั้นต่ำ */
+}
+
+/* เมื่อเอาเมาส์ไปชี้ปุ่มล้าง */
+.clear-button:hover {
+    background-color: #d32f2f; /* เปลี่ยนเป็นสีแดงเข้ม */
+    transform: translateY(-1px); /* เลื่อนขึ้น 1 พิกเซล */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* เงา */
+}
+
+/* ===== ข้อความช่วยเหลือ ===== */
+.help-message {
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    font-size: 12px;
+    margin-top: 10px; /* ระยะห่างด้านบน */
+    line-height: 1.4; /* ระยะห่างบรรทัด */
+    padding: 8px 15px; /* ช่องว่างด้านใน */
+    border-radius: 15px; /* มุมโค้ง */
+    max-width: 500px; /* ความกว้างสูงสุด */
+    margin-left: auto; /* จัดกึ่งกลางซ้าย */
+    margin-right: auto; /* จัดกึ่งกลางขวา */
+}
+
+/* ข้อความเตือน (สีส้ม) */
+.help-message.warning {
+    color: #ff9800; /* ข้อความสีส้ม */
+    background-color: #fff3e0; /* พื้นหลังส้มอ่อน */
+    border: 1px solid #ffcc02; /* เส้นขอบสีเหลือง */
+}
+
+/* ข้อความสำเร็จ (สีเขียว) */
+.help-message.success {
+    color: #4CAF50; /* ข้อความสีเขียว */
+    background-color: #e8f5e8; /* พื้นหลังเขียวอ่อน */
+    border: 1px solid #4CAF50; /* เส้นขอบสีเขียว */
+}
+
+/* ข้อความข้อผิดพลาด (สีแดง) */
+.help-message.error {
+    color: #f44336; /* ข้อความสีแดง */
+    background-color: #ffebee; /* พื้นหลังแดงอ่อน */
+    border: 1px solid #f44336; /* เส้นขอบสีแดง */
+}
+
+/* ===== การตอบสนองหน้าจอ (Responsive) ===== */
+
+/* หน้าจอแท็บเล็ตและมือถือ */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* จัดเรียงแนวตั้ง */
+        gap: 15px; /* เพิ่มระยะห่าง */
+    }
+    
+    .search-input {
+        width: 100%; /* ความกว้างเต็ม */
+        max-width: 300px; /* ความกว้างสูงสุด */
+    }
+    
+    .search-button {
+        width: 100%; /* ความกว้างเต็ม */
+        max-width: 150px; /* ความกว้างสูงสุด */
+    }
+    
+    .clear-button {
+        width: 60px; /* ความกว้างคงที่ */
+    }
+    
+    .help-message {
+        padding: 8px 20px; /* เพิ่มช่องว่างด้านข้าง */
+        font-size: 11px; /* ลดขนาดตัวอักษร */
+    }
+}
+
+/* หน้าจอมือถือขนาดเล็ก */
+@media (max-width: 480px) {
+    .search-input {
+        font-size: 16px; /* ป้องกันการซูมใน iOS */
+        padding: 12px 15px; /* เพิ่มช่องว่างด้านใน */
+    }
+    
+    .search-button {
+        padding: 12px 20px; /* เพิ่มช่องว่างด้านใน */
+        font-size: 14px;
+    }
+    
+    .search-label {
+        font-size: 14px; /* ลดขนาดตัวอักษร */
+    }
+    
+    .help-message {
+        font-size: 10px; /* ลดขนาดตัวอักษรเพิ่มเติม */
+        padding: 6px 15px; /* ลดช่องว่างด้านใน */
+    }
+}

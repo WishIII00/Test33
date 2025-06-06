@@ -1,0 +1,301 @@
+/* ResultsTable.css - สไตล์ตารางแสดงผลลัพธ์ */
+
+/* ===== คอนเทนเนอร์หลักของตาราง ===== */
+.results-container {
+    margin: 30px 0; /* ระยะห่างบนล่าง */
+    width: 100%; /* ความกว้างเต็ม */
+}
+
+/* ===== ข้อความแจ้งเตือนด้านบน ===== */
+.results-info {
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+    font-size: 12px;
+    color: #f44336; /* ข้อความสีแดง */
+    font-weight: bold; /* ตัวหนา */
+    background-color: #ffebee; /* พื้นหลังแดงอ่อน */
+    padding: 8px 15px; /* ช่องว่างด้านใน */
+    border-radius: 15px; /* มุมโค้ง */
+    border: 1px solid #f44336; /* เส้นขอบสีแดง */
+    max-width: 600px; /* ความกว้างสูงสุด */
+    margin-left: auto; /* จัดกึ่งกลางซ้าย */
+    margin-right: auto; /* จัดกึ่งกลางขวา */
+}
+
+/* ===== แสดงจำนวนผลลัพธ์ ===== */
+.results-count {
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    color: #666; /* ข้อความสีเทา */
+    font-size: 14px;
+}
+
+/* ตัวเลขจำนวนผลลัพธ์ */
+.results-count .count-number {
+    font-weight: bold; /* ตัวหนา */
+    color: #4FC3F7; /* สีฟ้า */
+    font-size: 16px; /* ขนาดตัวอักษรใหญ่ขึ้น */
+}
+
+/* ===== กล่องครอบตาราง ===== */
+.table-container {
+    overflow-x: auto; /* เลื่อนแนวนอนได้เมื่อตารางกว้างเกิน */
+    border-radius: 10px; /* มุมโค้ง */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* เงา */
+    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+}
+
+/* ===== ตารางผลลัพธ์หลัก ===== */
+.results-table {
+    width: 100%; /* ความกว้างเต็ม */
+    border-collapse: collapse; /* รวมเส้นขอบเซลล์ */
+    background-color: white; /* พื้นหลังสีขาว */
+    border-radius: 10px; /* มุมโค้ง */
+    overflow: hidden; /* ซ่อนส่วนที่เกิน */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ฟอนต์ */
+}
+
+/* ===== ส่วนหัวตาราง ===== */
+.results-table thead tr {
+    background-color: #f5f5f5; /* พื้นหลังสีเทาอ่อน */
+}
+
+.results-table th {
+    padding: 15px 10px; /* ช่องว่างด้านใน */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    font-weight: bold; /* ตัวหนา */
+    color: #333; /* ข้อความสีเทาเข้ม */
+    border-bottom: 2px solid #ddd; /* เส้นขอบด้านล่างสีเทา */
+    font-size: 14px;
+    white-space: nowrap; /* ไม่ขึ้นบรรทัดใหม่ */
+}
+
+/* ===== ส่วนเนื้อหาตาราง ===== */
+.results-table td {
+    padding: 15px 10px; /* ช่องว่างด้านใน */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    border-bottom: 1px solid #eee; /* เส้นขอบด้านล่างสีเทาอ่อน */
+    font-size: 14px;
+    vertical-align: middle; /* จัดแนวกึ่งกลางแนวตั้ง */
+}
+
+/* แถวคู่ - สีพื้นหลังสลับ */
+.results-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* พื้นหลังสีเทาอ่อนมาก */
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้แถว */
+.results-table tbody tr:hover {
+    background-color: #e3f2fd; /* พื้นหลังสีฟ้าอ่อน */
+    transition: background-color 0.3s ease; /* เปลี่ยนสีแบบค่อยเป็นค่อยไป */
+}
+
+/* ===== คอลัมน์รุ่นหุ้นกู้ ===== */
+.series-cell {
+    font-weight: bold; /* ตัวหนา */
+    color: #4FC3F7; /* ข้อความสีฟ้า */
+    font-size: 15px; /* ขนาดตัวอักษรใหญ่ขึ้น */
+}
+
+/* ===== คอลัมน์เลขทะเบียน ===== */
+.registration-cell {
+    font-family: 'Courier New', monospace; /* ฟอนต์แบบ monospace */
+    color: #333; /* ข้อความสีเทาเข้ม */
+    font-weight: 500; /* ตัวหนาปานกลาง */
+}
+
+/* ===== คอลัมน์ชื่อผู้ถือหุ้น ===== */
+.holder-name-cell {
+    font-weight: 500; /* ตัวหนาปานกลาง */
+    color: #333; /* ข้อความสีเทาเข้ม */
+    text-align: left; /* จัดข้อความชิดซ้าย */
+}
+
+/* ===== คอลัมน์จำนวนหุ้น ===== */
+.share-amount-cell {
+    font-family: 'Courier New', monospace; /* ฟอนต์แบบ monospace */
+    font-weight: bold; /* ตัวหนา */
+    color: #2e7d32; /* ข้อความสีเขียวเข้ม */
+    text-align: right; /* จัดข้อความชิดขวา */
+    padding-right: 20px; /* ช่องว่างด้านขวา */
+}
+
+/* ===== ส่วนท้ายตาราง (สรุปยอดรวม) ===== */
+.results-table tfoot tr {
+    background-color: #e3f2fd; /* พื้นหลังสีฟ้าอ่อน */
+    border-top: 2px solid #4FC3F7; /* เส้นขอบด้านบนสีฟ้า */
+}
+
+.results-table tfoot td {
+    padding: 12px 15px; /* ช่องว่างด้านใน */
+    font-weight: bold; /* ตัวหนา */
+    border-bottom: none; /* ไม่มีเส้นขอบด้านล่าง */
+}
+
+/* ป้ายชื่อยอดรวม */
+.total-label {
+    color: #333; /* ข้อความสีเทาเข้ม */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    font-size: 15px;
+}
+
+/* ตัวเลขยอดรวม */
+.total-amount {
+    color: #4FC3F7; /* ข้อความสีฟ้า */
+    font-family: 'Courier New', monospace; /* ฟอนต์แบบ monospace */
+    font-size: 16px; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    text-align: right; /* จัดข้อความชิดขวา */
+    padding-right: 20px; /* ช่องว่างด้านขวา */
+}
+
+/* ===== ข้อมูลเพิ่มเติมด้านล่างตาราง ===== */
+.table-footer-info {
+    margin-top: 15px; /* ระยะห่างด้านบน */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    font-size: 12px;
+    color: #666; /* ข้อความสีเทา */
+    line-height: 1.4; /* ระยะห่างบรรทัด */
+    padding: 8px 15px; /* ช่องว่างด้านใน */
+    background-color: #f8f9fa; /* พื้นหลังสีเทาอ่อนมาก */
+    border-radius: 10px; /* มุมโค้ง */
+}
+
+/* ไอคอนข้อมูล */
+.info-icon {
+    margin-right: 5px; /* ระยะห่างด้านขวา */
+    font-size: 14px;
+}
+
+/* ===== สถานะไม่มีข้อมูล ===== */
+.empty-results {
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    padding: 40px 20px; /* ช่องว่างด้านใน */
+    color: #999; /* ข้อความสีเทาอ่อน */
+    background-color: #f8f9fa; /* พื้นหลังสีเทาอ่อนมาก */
+    border-radius: 10px; /* มุมโค้ง */
+    margin: 20px 0; /* ระยะห่างบนล่าง */
+}
+
+/* ไอคอนสถานะไม่มีข้อมูล */
+.empty-results .empty-icon {
+    font-size: 48px; /* ขนาดใหญ่ */
+    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+    opacity: 0.5; /* โปร่งแสงครึ่งหนึ่ง */
+}
+
+/* ข้อความสถานะไม่มีข้อมูล */
+.empty-results .empty-text {
+    font-size: 16px;
+    color: #666; /* ข้อความสีเทา */
+    line-height: 1.5; /* ระยะห่างบรรทัด */
+}
+
+/* ===== สถานะกำลังโหลดสำหรับตาราง ===== */
+.results-table.loading {
+    opacity: 0.6; /* โปร่งแสง */
+    pointer-events: none; /* ไม่รับการคลิก */
+}
+
+/* ===== การตอบสนองหน้าจอ (Responsive) ===== */
+
+/* หน้าจอแท็บเล็ตและมือถือ */
+@media (max-width: 768px) {
+    .results-table {
+        font-size: 12px; /* ลดขนาดตัวอักษร */
+    }
+    
+    .results-table th,
+    .results-table td {
+        padding: 10px 5px; /* ลดช่องว่างด้านใน */
+    }
+    
+    .results-table th {
+        font-size: 12px;
+    }
+    
+    .results-table td {
+        font-size: 11px;
+    }
+    
+    .table-footer-info {
+        font-size: 11px; /* ลดขนาดตัวอักษร */
+        padding: 8px 10px; /* ลดช่องว่างด้านใน */
+    }
+    
+    .results-info {
+        font-size: 11px;
+        padding: 6px 10px; /* ลดช่องว่างด้านใน */
+    }
+    
+    /* จัดข้อความกึ่งกลางในมือถือ */
+    .holder-name-cell {
+        text-align: center; /* เปลี่ยนจากชิดซ้ายเป็นกึ่งกลาง */
+    }
+    
+    .share-amount-cell {
+        text-align: center; /* เปลี่ยนจากชิดขวาเป็นกึ่งกลาง */
+        padding-right: 5px; /* ลดช่องว่างด้านขวา */
+    }
+    
+    .total-amount {
+        text-align: center; /* เปลี่ยนจากชิดขวาเป็นกึ่งกลาง */
+        padding-right: 5px; /* ลดช่องว่างด้านขวา */
+    }
+}
+
+/* หน้าจอมือถือขนาดเล็ก */
+@media (max-width: 480px) {
+    .results-table th,
+    .results-table td {
+        padding: 8px 3px; /* ลดช่องว่างด้านในเพิ่มเติม */
+    }
+    
+    .results-table th {
+        font-size: 11px; /* ลดขนาดตัวอักษรเพิ่มเติม */
+    }
+    
+    .results-table td {
+        font-size: 10px;
+    }
+    
+    /* ซ่อนคอลัมน์เลขทะเบียนในหน้าจอเล็กมาก */
+    .results-table .registration-cell,
+    .results-table th:nth-child(2) {
+        display: none; /* ซ่อนคอลัมน์ที่ 2 */
+    }
+    
+    .empty-results .empty-icon {
+        font-size: 36px; /* ลดขนาดไอคอน */
+    }
+    
+    .empty-results .empty-text {
+        font-size: 14px; /* ลดขนาดข้อความ */
+    }
+}
+
+/* ===== สไตล์สำหรับการพิมพ์ ===== */
+@media print {
+    .results-table {
+        border: 1px solid #000; /* เส้นขอบสีดำ */
+    }
+    
+    .results-table th,
+    .results-table td {
+        border: 1px solid #000; /* เส้นขอบเซลล์สีดำ */
+        padding: 5px; /* ลดช่องว่างด้านใน */
+    }
+    
+    /* ยกเลิกเอฟเฟกต์ hover เมื่อพิมพ์ */
+    .results-table tbody tr:hover {
+        background-color: transparent !important;
+    }
+    
+    /* ซ่อนข้อมูลที่ไม่จำเป็นเมื่อพิมพ์ */
+    .table-footer-info {
+        display: none;
+    }
+    
+    .results-info {
+        display: none;
+    }
+}
